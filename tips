@@ -1,0 +1,10 @@
+1，安卓6.0以下大部分机型是不支持es6写法的。样式方面flex也是不太兼容的。
+  解决办法：
+  1），论坛上有人提到了apicloud-cli,说是可以支持es6.但是由于我们的项目是上线之后才发现这一问题。这个方法只能留到3.0去试一下了。（https://docs.apicloud.com/Dev-Tools/apicloud-cli）
+  2），使用Babel-html（https://babeljs.io/docs/en），使用命令将es6转为es5。（2.0解决办法）
+  3），如果用的不多也可以直接用babel,将自己写的es6复制进去，再粘贴出来就可以了。（个人觉得太繁琐）
+  4），老老实实不用es6。（个人觉得这条还是算了吧，哈哈哈~）
+2，第三方登录的时候，使用到QQ，微信，微博，如果发现安卓可以，iOS不行，而且代码也是找不到问题的情况下，可以尝试更换一下该模块的版本，重新编译一下试试。
+3，还是第三方登录的问题，安卓的应用签名换了一定要去第三方平台下更新一下。切记切记，说多了都是泪。
+4，openframe,openwin,openframegroup的时候，一定要记得关闭其他的页面。否则页面要么被遮住，要么下面同时打开了多个页面。framegroup的时候，也可以使用setFrameGroupAttr，hidden这个参数，上级frame不能隐藏（https://docs.apicloud.com/Client-API/api#42）
+5，
