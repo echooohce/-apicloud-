@@ -7,4 +7,4 @@
 2，第三方登录的时候，使用到QQ，微信，微博，如果发现安卓可以，iOS不行，而且代码也是找不到问题的情况下，可以尝试更换一下该模块的版本，重新编译一下试试。
 3，还是第三方登录的问题，安卓的应用签名换了一定要去第三方平台下更新一下。切记切记，说多了都是泪。
 4，openframe,openwin,openframegroup的时候，一定要记得关闭其他的页面。否则页面要么被遮住，要么下面同时打开了多个页面。framegroup的时候，也可以使用setFrameGroupAttr，hidden这个参数，上级frame不能隐藏（https://docs.apicloud.com/Client-API/api#42）
-5，
+
