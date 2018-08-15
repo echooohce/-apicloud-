@@ -4,7 +4,9 @@
   2），使用Babel-html（https://babeljs.io/docs/en），使用命令将es6转为es5。（2.0解决办法）
   3），如果用的不多也可以直接用babel,将自己写的es6复制进去，再粘贴出来就可以了。（个人觉得太繁琐）
   4），老老实实不用es6。（个人觉得这条还是算了吧，哈哈哈~）
-2，第三方登录的时候，使用到QQ，微信，微博，如果发现安卓可以，iOS不行，而且代码也是找不到问题的情况下，可以尝试更换一下该模块的版本，重新编译一下试试。
-3，还是第三方登录的问题，安卓的应用签名换了一定要去第三方平台下更新一下。切记切记，说多了都是泪。
-4，openframe,openwin,openframegroup的时候，一定要记得关闭其他的页面。否则页面要么被遮住，要么下面同时打开了多个页面。framegroup的时候，也可以使用setFrameGroupAttr，hidden这个参数，上级frame不能隐藏（https://docs.apicloud.com/Client-API/api#42）
+2.ios9.**大部分机型不支持
+3，第三方登录的时候，使用到QQ，微信，微博，如果发现安卓可以，iOS不行，而且代码也是找不到问题的情况下，可以尝试更换一下该模块的版本，重新编译一下试试。
+4，还是第三方登录的问题，安卓的应用签名换了一定要去第三方平台下更新一下。切记切记，说多了都是泪。
+5，openframe,openwin,openframegroup的时候，一定要记得关闭其他的页面。否则页面要么被遮住，要么下面同时打开了多个页面。framegroup的时候，也可以使用setFrameGroupAttr，hidden这个参数，上级frame不能隐藏（https://docs.apicloud.com/Client-API/api#42）
+6， $api.getStorage('jpushId');会有域的问题，可以使用api.setPrefs({key: 'islogin',value: 'yes'})代替；
 
